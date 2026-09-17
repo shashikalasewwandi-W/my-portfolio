@@ -270,7 +270,9 @@ section:not(#home) h2 {
 }
 
 
-/* Section Label */
+/* =========================
+   SECTION LABEL
+========================= */
 
 .section-label {
     color: #22d3ee;
@@ -412,6 +414,7 @@ section:not(#home) h2 {
 
 .skills-heading {
     max-width: 650px;
+
     margin-bottom: 45px;
 }
 
@@ -421,7 +424,9 @@ section:not(#home) h2 {
 
 .skills-heading > p:last-child {
     color: #9ca3af;
+
     font-size: 16px;
+
     line-height: 1.7;
 }
 
@@ -572,28 +577,31 @@ section:not(#home) h2 {
 
 @media (max-width: 1000px) {
 
+    #home {
+        padding: 60px 6%;
+    }
+
+    .profile-container {
+        width: 330px;
+        height: 330px;
+    }
+
+    .profile-circle {
+        width: 290px;
+        height: 290px;
+    }
+
+    .profile-image {
+        width: 260px;
+        height: 260px;
+    }
+
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-box {
-        min-height: 170px;
-    }
-
-}
 
 /* =========================
    PROJECTS
@@ -763,7 +771,6 @@ section:not(#home) h2 {
 }
 
 
-
 /* =========================
    CONTACT
 ========================= */
@@ -781,7 +788,6 @@ section:not(#home) h2 {
 
     background: #0b0d0f;
 }
-
 
 .contact-container {
     width: 100%;
@@ -847,7 +853,6 @@ section:not(#home) h2 {
     transition: 0.3s;
 }
 
-
 .contact-item:hover {
     border-color: #22d3ee;
 
@@ -882,22 +887,350 @@ section:not(#home) h2 {
 
 
 /* =========================
-   CONTACT MOBILE
+   MOBILE
 ========================= */
 
 @media (max-width: 700px) {
 
+    /* Navigation */
+
+    nav {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 15px 5%;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav ul {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+
+    /* Home */
+
+    #home {
+        min-height: auto;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 80px 7% 60px;
+
+        gap: 40px;
+    }
+
+    .home-content {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .small-text {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 46px;
+
+        margin-bottom: 12px;
+    }
+
+    .home-content h2 {
+        font-size: 20px;
+
+        line-height: 1.4;
+
+        margin-bottom: 18px;
+    }
+
+    .description {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin: 0 auto 25px;
+    }
+
+
+    /* Home Buttons */
+
+    .home-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 12px 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* Profile */
+
+    .profile-container {
+        width: 280px;
+
+        height: 280px;
+    }
+
+    .profile-circle {
+        width: 250px;
+
+        height: 250px;
+    }
+
+    .profile-image {
+        width: 230px;
+
+        height: 230px;
+    }
+
+
+    /* General Sections */
+
+    section:not(#home) {
+        min-height: auto;
+
+        padding: 75px 7%;
+    }
+
+    section:not(#home) h2 {
+        font-size: 34px;
+
+        line-height: 1.2;
+    }
+
+
+    /* About */
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 35px;
+
+        line-height: 1.25;
+
+        margin-bottom: 25px;
+    }
+
+    .about-text p:not(.section-label) {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .about-card {
+        width: 100%;
+    }
+
+    .about-item {
+        gap: 15px;
+
+        padding: 20px 15px;
+    }
+
+    .about-item h3 {
+        font-size: 16px;
+    }
+
+    .about-item p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* Skills */
+
+    .skills-heading {
+        margin-bottom: 30px;
+    }
+
+    .skills-heading > p:last-child {
+        font-size: 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .skill-box {
+        min-height: 170px;
+
+        padding: 22px;
+    }
+
+    .skill-top {
+        margin-bottom: 25px;
+    }
+
+
+    /* Projects */
+
+    .projects-heading {
+        margin-bottom: 30px;
+    }
+
+    .projects-heading > p:last-child {
+        font-size: 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Contact */
+
     #contact {
+        min-height: auto;
+
         padding: 80px 7%;
     }
 
     .contact-container h2 {
         font-size: 38px;
+
+        line-height: 1.2;
+    }
+
+    .contact-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 30px;
     }
 
     .contact-details {
         grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .contact-item {
+        padding: 22px;
+    }
+
+    .contact-value {
+        font-size: 13px;
     }
 
 }
 
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    nav {
+        padding: 14px 4%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+    }
+
+    #home {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h2 {
+        font-size: 18px;
+    }
+
+    .profile-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-circle {
+        width: 225px;
+        height: 225px;
+    }
+
+    .profile-image {
+        width: 205px;
+        height: 205px;
+    }
+
+    section:not(#home) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
